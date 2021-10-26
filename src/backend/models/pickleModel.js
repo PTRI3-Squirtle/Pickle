@@ -3,7 +3,7 @@
 const { Pool } = require('pg');
 require('dotenv').config();
 
-const PG_URI = `postgres://postgres:apple123@localhost`;
+const PG_URI = `postgres://${process.env.Userdatabase}:${process.env.Password}@localhost`;
 
 const pool = new Pool({
   connectionString: PG_URI,
