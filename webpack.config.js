@@ -13,7 +13,17 @@ module.exports = {
     filename: 'bundle.js',
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.ts', '.tsx', '.json', '.jpg', '.jpeg', '.png'],
+    extensions: [
+      '',
+      '.js',
+      '.jsx',
+      '.ts',
+      '.tsx',
+      '.json',
+      '.jpg',
+      '.jpeg',
+      '.png',
+    ],
   },
   module: {
     rules: [
@@ -38,6 +48,11 @@ module.exports = {
         ],
       },
       {
+        test: /.(tsx|ts)$/,
+        exclude: /node_modules/,
+        loader: 'ts-loader',
+      },
+      {
         test: /\.(gif|svg|jpg|png)$/,
         loader: 'file-loader',
       },
@@ -54,12 +69,12 @@ module.exports = {
     /*The bundled files will be available in the browser under this path. 
     publicPath says that any request made to '/' will be served the development version of our bundle via localhost:8080. publicPath should match where we have index.html
     */
-    publicPath: '/build',
+    // publicPath: '/build',
 
     hot: true,
     // Tell the server where to serve content from.
-    contentBase: path.resolve(__dirname, './src/frontend/index.tsx'),
-    watchContentBase: true,
+    // contentBase: path.resolve(__dirname, './src/frontend/index.tsx'),
+    // watchContentBase: true,
 
     // Proxy says that any request made to '/api' will be routed to our server on localhost:3000
     // proxy should match whatever is going to match your fetch request on your frontend.
