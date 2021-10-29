@@ -1,0 +1,53 @@
+{
+  "name": "pickle",
+  "version": "1.0.0",
+  "description": "A quirky, buy nothing community.",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"nodemon src/backend/server.js\" \"cross-env NODE_ENV=development webpack serve --hot --open\"",
+    "build": "cross-env NODE_ENV=production webpack",
+    "start": "cross-env NODE_ENV=production nodemon src/backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PTRI3-Squirtle/Pickle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PTRI3-Squirtle/Pickle/issues"
+  },
+  "homepage": "https://github.com/PTRI3-Squirtle/Pickle#readme",
+  "dependencies": {
+    "@typescript-eslint/parser": "^5.2.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.14",
+    "pg": "^8.7.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.4.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/plugin-transform-runtime": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "concurrently": "^6.3.0",
+    "eslint": "^8.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "sass": "^1.43.4",
+    "sass-loader": "^12.3.0",
+    "ts-loader": "^9.2.6",
+    "webpack": "^5.60.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.4.0"
+  }
+}
