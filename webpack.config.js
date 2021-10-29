@@ -58,7 +58,7 @@ module.exports = {
 
     hot: true,
     // Tell the server where to serve content from.
-    contentBase: path.resolve(__dirname, './src/frontend'),
+    contentBase: path.resolve(__dirname, './src/frontend/index.tsx'),
     watchContentBase: true,
 
     // Proxy says that any request made to '/api' will be routed to our server on localhost:3000
