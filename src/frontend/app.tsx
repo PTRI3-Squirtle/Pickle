@@ -1,14 +1,14 @@
 /** @format */
-
+import './main.scss';
 import pickle from '../assets/pickle.jpg';
-import Feed from './Feed';
+import Signin from './Signin';
 
 const App = (): JSX.Element => {
   return (
     <div>
       "PPPICKLE"
       <img src={pickle} alt="It's a pickle!!!"></img>
-      <Feed></Feed>
+      <Signin></Signin>
     </div>
   );
 };

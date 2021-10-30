@@ -6,7 +6,7 @@ const Signin = (): JSX.Element => {
     const [password, setPassword] = useState('');
 
     return (
-        <div>
+        <div className='loginContainer'>
             <p>Login</p>
             <form>
                 <label htmlFor='username'>
