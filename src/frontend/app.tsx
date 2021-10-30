@@ -1,7 +1,36 @@
 /** @format */
 
 import pickle from '../assets/pickle.jpg';
-const App = (): JSX.Element => {
+import { useEffect } from 'react';
+import { gql, useQuery } from '@apollo/client';
+const App = () => {
+  const GET_USER = gql`
+    query user {
+      user(id: 1) {
+        id
+        userName
+        email
+        zip
+      }
+    }
+  `;
+
+  const postRequest = async () => {
+    console.log('hello');
+    const { loading, error, data } = await useQuery(GET_USER);
+    console.log('hello2');
+    if (loading) return null;
+
+    if (error) return `Error! ${error}`;
+    else {
+      console.log('data: ', data);
+    }
+  };
+
+  const getRequest = async () => {};
+  postRequest();
+  // getRequest();
+
   return (
     <div>
       "PPPICKLE"
