@@ -16,14 +16,14 @@ const typeDefs = gql`
     userName: String!
     message: String!
     messageSender: String!
-    timeStamp: int!
+    timeStamp: Int!
   }
 
   type Post {
     id: ID!
     userName: String!
     zip: String!
-    date: int!
+    date: Int!
     description: String!
     photo: String
   }
@@ -36,6 +36,21 @@ const typeDefs = gql`
   }
 
   type Mutation {
+    addUser(
+      id: ID!
+      userName: String!
+      email: String!
+      password: String!
+      zip: String!
+    ): User
+    updateUser(
+      id: ID!
+      userName: String!
+      email: String!
+      password: String!
+      zip: String!
+    ): User
+    deleteUser(userName: String!, password: String!): User
     sendMessage(id: ID!, userName: String!, zip: String): Message
     modifyPost(id: ID!, userName: String!, zip: String!): Post
   }
