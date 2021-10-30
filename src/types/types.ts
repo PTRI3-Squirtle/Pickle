@@ -6,7 +6,7 @@
 //   property: string;
 // };
 
-export type mockPostType = {
+export interface mockPostInterface {
     id: Number,
     description: string;
     username: string;

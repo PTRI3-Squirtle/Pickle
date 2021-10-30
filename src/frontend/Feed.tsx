@@ -1,13 +1,13 @@
 import React from 'react';
 import Post from './Post';
-import { mockPostType } from '../types/types';
+import { mockPostInterface } from '../types/types';
 
 
 
 
 const Feed = () : JSX.Element => {
 
-    const mockPost: mockPostType = {
+    const mockPost: mockPostInterface = {
         id: 1,
         description: 'this is an amazing post',
         username: 'Kevin',
