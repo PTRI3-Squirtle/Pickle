@@ -1,6 +1,7 @@
 /** @format */
-
+import './main.scss';
 import pickle from '../assets/pickle.jpg';
+import Signin from './Signin';
 import { useEffect } from 'react';
 import { gql, useQuery } from '@apollo/client';
 const App = () => {
@@ -35,6 +36,7 @@ const App = () => {
     <div>
       "PPPICKLE"
       <img src={pickle} alt="It's a pickle!!!"></img>
+      <Signin></Signin>
     </div>
   );
 };
