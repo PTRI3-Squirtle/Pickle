@@ -1,0 +1,9 @@
+.button {
+    width: 15rem;
+    height: 7.5rem;
+    border-radius: 20rem;
+    margin: .4rem;
+        &:hover {
+            background-color: $primary-color;
+        }
+}

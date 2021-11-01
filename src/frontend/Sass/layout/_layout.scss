@@ -1,0 +1,13 @@
+.layout {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.layout_leftNavBar{
+    width: 25%;
+}
+
+.layout_main{
+    width: 75%;
+}

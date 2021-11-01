@@ -1,5 +1,5 @@
 import React from 'react';
-import { mockPostInterface } from '../types/types';
+import { mockPostInterface } from '../../types/types';
 
 const Post = (props: mockPostInterface) : JSX.Element => {
     console.log("props in post: ", props);
