@@ -2,16 +2,18 @@
 import React from 'react';
 import { ReactDOM } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Pickle from './Components/PickleImage';
+
 // components
 import Layout from './Components/Layout';
+import Pickle from './Components/PickleImage';
+import Feed from './Components/Feed';
+import Signin from './Components/Signin';
 
 // this imports the main Sass file, making it available in all components
 import './main.scss';
 
-import pickle from '../assets/pickle.jpg';
-import { useEffect } from 'react';
 import { gql, useQuery } from '@apollo/client';
+
 const App = () => {
   const GET_USER = gql`
     query user {
@@ -41,13 +43,21 @@ const App = () => {
   // getRequest();
 
   return (
-    <>
-      <Router>
-        <Layout>
-          <Pickle></Pickle>
-        </Layout>
-      </Router>
-    </>
+    <Router>
+      <Layout>
+        <Switch>
+          <Route path='/pickle'>
+            <Pickle />
+          </Route>
+          <Route path='/signin'>
+            <Signin />
+          </Route>
+          <Route path='/'>
+            <Feed />
+          </Route>
+        </Switch>
+      </Layout>
+    </Router>
   );
 };
 
