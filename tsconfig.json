@@ -17,7 +17,7 @@
   },
   "include": [
       "./src/**/*", // specifies files for type checking (checks all files in src folder)
-      "*.jpg",
+      "*.jpg", "Index.tsx", "App.tsx",
   ],
   "exclude": [
       "node_modules"

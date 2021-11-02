@@ -1,8 +1,15 @@
 /** @format */
+import React from 'react';
+import { ReactDOM } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Pickle from './Components/PickleImage';
+// components
+import Layout from './Components/Layout';
+
+// this imports the main Sass file, making it available in all components
 import './main.scss';
+
 import pickle from '../assets/pickle.jpg';
-import Signin from './Signin';
-import Feed from './Feed';
 import { useEffect } from 'react';
 import { gql, useQuery } from '@apollo/client';
 const App = () => {
@@ -34,12 +41,13 @@ const App = () => {
   // getRequest();
 
   return (
-    <div>
-      "PPPICKLE"
-      <img src={pickle} alt="It's a pickle!!!"></img>
-      <Signin></Signin>
-      <Feed></Feed>
-    </div>
+    <>
+      <Router>
+        <Layout>
+          <Pickle></Pickle>
+        </Layout>
+      </Router>
+    </>
   );
 };
 
