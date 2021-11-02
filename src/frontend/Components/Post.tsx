@@ -1,21 +1,26 @@
+import { isLeafType } from 'graphql';
 import React from 'react';
 import { mockPostInterface } from '../../types/types';
 
 const Post = (props: mockPostInterface) : JSX.Element => {
-    console.log("props in post: ", props);
-    return (
+
+  return (
+    <div className='post_wrapper'>
       <div>
-        {/* 
-            // an element for  the description
-            // and element for the username
-            // elements for comments */}
-        <p>{props.description}</p>
-        <p>{props.username}</p>
+        <p className='post_username'>
+          {props.username[0]}
+        </p>
+      </div>
+      <div className='post_description_wrapper'>
+        <p>
+          {props.description}
+        </p>
         <ul>
           <li>This is a comment</li>
           <li>This is another comment</li>
         </ul>
       </div>
+    </div>
     );
 };
 
