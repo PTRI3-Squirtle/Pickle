@@ -53,16 +53,14 @@ const App = () => {
   return (
     <div>
       <Router>
-        <Layout>
-          <Switch>
-            <Route exact path='/createpost'>
-              {CreateNewPost}
-            </Route>
-            <Route exact path='/'>
-              {Feed}
-            </Route>
-          </Switch>
-        </Layout>
+        <React.Fragment>
+          <Layout>
+            <Switch>
+              <Route exact path='/' component={Feed} />
+              <Route exact path='/post' component={CreateNewPost} />
+            </Switch>
+          </Layout>
+        </React.Fragment>
       </Router>
     </div>
   );
