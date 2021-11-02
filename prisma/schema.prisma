@@ -29,5 +29,6 @@ model Post {
   zip           String  
   date          Int 
   description   String
+  title         String
   photo         String
 }

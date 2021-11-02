@@ -25,6 +25,7 @@ const typeDefs = gql`
     zip: String!
     date: Int!
     description: String!
+    title: String!
     photo: String
   }
 
@@ -50,6 +51,14 @@ const typeDefs = gql`
       password: String!
       zip: String!
     ): User
+    createPost(
+      userName: String!
+      zip: String!
+      date: Int!
+      description: String!
+      title: String!
+      photo: String
+    ): Post
     deleteUser(userName: String!, password: String!): User
     sendMessage(id: ID!, userName: String!, zip: String): Message
     modifyPost(id: ID!, userName: String!, zip: String!): Post
