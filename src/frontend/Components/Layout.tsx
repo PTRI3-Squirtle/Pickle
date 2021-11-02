@@ -15,7 +15,8 @@ const Layout: FC<layoutProps> = ({ children }) => {
             <LeftNavBar />
         </div>
         <main className='layout_main'>
-            {children}
+          <PickleImage />
+          {children}
         </main>
       </div>
   )
