@@ -1,6 +1,6 @@
 import React from 'react';
 import Post from './Post';
-import { mockPostInterface } from '../types/types';
+import { mockPostInterface } from '../../types/types';
 
 
 

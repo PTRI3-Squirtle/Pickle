@@ -1,0 +1,37 @@
+// This file holds base styling
+
+// Global reset
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* 'rem' are relative units. 1 rem is exactly the root font size (default is 1 rem = 16px, and is set by the browser). For ease of development, we want to set 1 rem = 10px in our html. However, if we hard code in a value, such as 10px, our users lose the ability to adjust the font size, making our site less accessible. To use a percentage, we divide what we want, 10, by the default, 16, which gives us 1 rem = 62.5%.
+*/ 
+html {
+  font-size: 62.5%;                       // 1 rem = 10px; 10px/16px = 62.5%
+
+  @include respond(tab-landscape) {
+    font-size: 56.25%;                     // 1 rem = 9px; 9px/16px = 56.25%
+  }
+
+  @include respond(tab-portrait) {
+    font-size: 50%;                       // 1 rem = 8px; 8px/16px = 50%
+  }
+
+  @include respond(phone) {
+    font-size: 37.5%;                       // 1 rem = 6px; 6px/16px = 37.5%  
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%;                       // 1 rem = 12px; 12px/16px = 75%
+  }
+}
+
+body {
+  padding: 3 rem;
+  box-sizing: border-box;
+}
