@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently \"nodemon src/backend/server.js\" \"cross-env NODE_ENV=development webpack serve --hot --open\"",
     "build": "cross-env NODE_ENV=production webpack",
-    "start": "cross-env NODE_ENV=production nodemon src/backend/server.js"
+    "start": "cross-env NODE_ENV=production nodemon src/backend/server.js",
+    "server": "nodemon src/backend/server.js"
   },
   "repository": {
     "type": "git",
@@ -21,16 +22,25 @@
   },
   "homepage": "https://github.com/PTRI3-Squirtle/Pickle#readme",
   "dependencies": {
+    "@apollo/client": "^3.4.16",
+    "@prisma/client": "^3.3.0",
     "@typescript-eslint/parser": "^5.2.0",
+    "apollo-server": "^3.4.0",
+    "apollo-server-express": "^3.4.0",
+    "axios": "^0.24.0",
     "babel-loader": "^8.2.3",
     "cross-env": "^7.0.3",
+    "css-loader": "^6.5.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "file-loader": "^6.2.0",
+    "graphql": "^15.7.2",
+    "http": "*",
     "nodemon": "^2.0.14",
     "pg": "^8.7.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "style-loader": "^3.3.1",
     "typescript": "^4.4.4"
   },
   "devDependencies": {
@@ -45,6 +55,7 @@
     "concurrently": "^6.3.0",
     "eslint": "^8.1.0",
     "html-webpack-plugin": "^5.5.0",
+    "prisma": "^3.3.0",
     "sass": "^1.43.4",
     "sass-loader": "^12.3.0",
     "ts-loader": "^9.2.6",
