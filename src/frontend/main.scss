@@ -1,0 +1,25 @@
+// This file exists only to hold the imports from our other files. Sass will not compile partials, but will compile this file with all it's imports.
+
+@import 'Sass/abstracts/variables';
+@import 'Sass/abstracts/functions';
+@import 'Sass/abstracts/mixins';
+
+@import 'Sass/vendors/icons';
+
+@import 'Sass/base/base';
+@import 'Sass/base/typography';
+@import 'Sass/base/utilities';
+
+@import 'Sass/layout/header';
+@import 'Sass/layout/footer';
+@import 'Sass/layout/layout';
+
+@import 'Sass/components/buttons';
+@import 'Sass/components/form';
+@import 'Sass/components/signin';
+@import 'Sass/components/leftNavBar';
+
+@import 'Sass/pages/home';
+@import 'Sass/pages/signin';
+
+@import 'Sass/themes/pickleTheme';

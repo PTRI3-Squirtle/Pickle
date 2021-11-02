@@ -1,7 +1,11 @@
-// export type Sample = {
-//   property: string;
-// };
+// This interface is for the Layout Component
+export interface layoutProps {
+    props?: any,
+}
 
-// export interface Sample = {
-//   property: string;
-// };
+export interface mockPostInterface {
+    id: Number,
+    description: string;
+    username: string;
+    date: Date;
+}

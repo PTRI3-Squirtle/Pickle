@@ -1,4 +1,13 @@
 /** @format */
+import React from 'react';
+import { ReactDOM } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+// components
+import Layout from './Components/Layout';
+
+// this imports the main Sass file, making it available in all components
+import './main.scss';
 
 import pickle from '../assets/pickle.jpg';
 import { useEffect } from 'react';
@@ -32,10 +41,11 @@ const App = () => {
   // getRequest();
 
   return (
-    <div>
-      "PPPICKLE"
-      <img src={pickle} alt="It's a pickle!!!"></img>
-    </div>
+    <>
+      <Router>
+        <Layout></Layout>
+      </Router>
+    </>
   );
 };
 
