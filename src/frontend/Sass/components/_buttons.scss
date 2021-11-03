@@ -1,5 +1,5 @@
 .button {
-    width: 15rem;
+    width: 12rem;
     height: 7.5rem;
     border-radius: 20rem;
     margin: .4rem;
@@ -8,11 +8,20 @@
     font-size: 2rem;
 
         &:hover {
-            background-color: $primary-color;
-            color: $color-white;
-            box-shadow: .1rem .2rem rgba(0,0,0,0.2);
+            background-color: $color-grey-light;
+            color: $color-black;
+            box-shadow: 1px 1px rgba(0,0,0,0.4);
+            cursor: pointer;
         };
+
         &:active {
             box-shadow: none;
+            transform: translate(0px, 1px);
         }
+}
+
+.greenButton {
+    @extend .button;
+    background-color: $primary-color;
+    color: $color-white;
 }

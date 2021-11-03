@@ -80,11 +80,11 @@ module.exports = {
     // proxy should match whatever is going to match your fetch request on your frontend.
     proxy: {
       '/api/**': {
-        target: 'http://localhost:3000/',
+        target: 'http://localhost:9090/',
         secure: false,
       },
       '/user/**': {
-        target: 'http://localhost:3000/',
+        target: 'http://localhost:9090/',
         secure: false,
       },
     },

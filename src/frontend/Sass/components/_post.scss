@@ -1,24 +1,24 @@
-ul {
-    list-style-type: none;
+.post_wrapper {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+
+    &:hover {
+        background-color: $color-grey-light;
+    }
 }
-// img {
-    
-// }
-.postContent {
-    display: flex;
-    justify-content: flex-end;
+
+.post_username {
+    padding-top: .2rem;
+    text-align: center;
+    font-size: 3rem;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    background-color: $primary-color;
+    color: $color-white;
 }
-.ellipsisImage {
-    position: relative;
-    right: 0px;
-    bottom: 0px;
-}
-.postContainer {
-    padding-left: 2rem;
-    max-width: 75%;
-    max-height: 75%;
+
+.post_description_wrapper {
+    padding-left: 3rem;
+    font-size: 3rem;
 }

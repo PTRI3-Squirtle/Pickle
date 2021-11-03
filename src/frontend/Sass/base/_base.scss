@@ -32,6 +32,18 @@ html {
 }
 
 body {
-  padding: 3 rem;
+  padding: 3rem;
   box-sizing: border-box;
+}
+
+h1 {
+  padding-top: 3rem;
+  padding-left: 3rem;
+  padding-bottom: 3rem;
+  font-size: 3rem;
+  text-align: left;
+}
+
+ul {
+  list-style-type: none;
 }
