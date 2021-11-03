@@ -6,6 +6,7 @@ import { layoutProps } from '../../types/types';
 // components that should appear on every page
 import LeftNavBar from './LeftNavBar';
 import PickleImage from './PickleImage';
+import Feed from './Feed';
 
 // This component contains the left nav bar and footer
 const Layout: FC<layoutProps> = ({ children }) => {
@@ -16,6 +17,7 @@ const Layout: FC<layoutProps> = ({ children }) => {
         </div>
         <main className='layout_main'>
           <PickleImage />
+          <Feed/>
           {children}
         </main>
       </div>

@@ -1,0 +1,24 @@
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+// img {
+    
+// }
+.postContent {
+    display: flex;
+    justify-content: flex-end;
+}
+.ellipsisImage {
+    position: relative;
+    right: 0px;
+    bottom: 0px;
+}
+.postContainer {
+    padding-left: 2rem;
+    max-width: 75%;
+    max-height: 75%;
+}
