@@ -47,17 +47,15 @@ const App = () => {
   return (
     <Router>
       <Layout>
-        <Switch>
-          <Route path='/pickle'>
-            <Pickle />
-          </Route>
-          <Route path='/signin'>
-            <Signin />
-          </Route>
-          <Route path='/'>
-            <Feed />
-          </Route>
-        </Switch>
+        <Route exact path='/' component={Signin}>
+          <Signin />
+        </Route>
+        <Route exact path='/pickle' component={Pickle}>
+          <Pickle />
+        </Route>
+        <Route exact path='/feed' component={Feed }>
+          <Feed />
+        </Route>
       </Layout>
     </Router>
   );

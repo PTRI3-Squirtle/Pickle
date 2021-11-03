@@ -17,7 +17,6 @@ const Layout: FC<layoutProps> = ({ children }) => {
         </div>
         <main className='layout_main'>
           <PickleImage />
-          <Feed/>
           {children}
         </main>
       </div>
