@@ -75,6 +75,11 @@ const Mutation = {
       },
     });
   },
+  deletePost: (parent, args) => {
+    return prisma.post.deleteMany({
+      where: { title: String(args.title) },
+    });
+  },
   // registerStudent: (parent, args) => {
   //   return prisma.student.create({
   //     data: {

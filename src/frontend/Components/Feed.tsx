@@ -34,7 +34,7 @@ const Feed = (): JSX.Element => {
       //  console.log('data', data);
       // do .then() here ----(I get a rejected promise:  data.then is not a function)
       // data.then((getdata: any) => (variable = getdata));
-      console.log('data inside useQuery Hook: ', data);
+      // console.log('data inside useQuery Hook: ', data);
       for (let i = 0; i < data.posts.length; i++) {
         postsArray.push(
           <div className='feed_posts_wrapper'>
@@ -47,8 +47,8 @@ const Feed = (): JSX.Element => {
   };
   // useEffect(async (): Promise<any> => await postRequest());
 
+  // useEffect((): any => postRequest(), []);
   postRequest();
-
   // const mockPost: mockPostInterface = {
   //   id: 1,
   //   description: 'this is an amazing post',

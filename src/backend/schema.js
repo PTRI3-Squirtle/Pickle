@@ -63,6 +63,14 @@ const typeDefs = gql`
     deleteUser(userName: String!, password: String!): User
     sendMessage(id: ID!, userName: String!, zip: String): Message
     modifyPost(id: ID!, userName: String!, zip: String!): Post
+    deletePost(
+      userName: String
+      zip: String
+      date: Int
+      description: String
+      title: String
+      photo: String
+    ): Post
   }
 `;
 module.exports = {
