@@ -4,8 +4,7 @@ import pickle from '../../assets/pickle.jpg';
 const PickleImage = () => {
     return (
         <div>
-            "PPPICKLE"
-            <img src={pickle} alt="It's a pickle!!!"></img>
+            <img src={pickle} alt="It's a pickle!!!" height='100rem'></img>
         </div>
     )
 }

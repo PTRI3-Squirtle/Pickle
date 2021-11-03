@@ -44,6 +44,7 @@ const typeDefs = gql`
       password: String!
       zip: String!
     ): User
+
     updateUser(
       id: ID!
       userName: String!

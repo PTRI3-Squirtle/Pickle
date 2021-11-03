@@ -22,8 +22,10 @@ const Post = {
   id: (parent, args, context, info) => parent.id,
   userName: (parent) => parent.userName,
   zip: (parent) => parent.zip,
-  date: (parent) => parent.timeStamp,
+  date: (parent) => parent.date,
   description: (parent) => parent.description,
+  photo: (parent) => parent.photo,
+  title: (parent) => parent.title,
 };
 
 const Query = {
@@ -37,13 +39,11 @@ const Query = {
   },
 
   posts: (parent, args) => {
-    return prisma.user.findMany({
-      where: { id: Number(args.id), zip: Number(args.id) },
-    });
+    return prisma.post.findMany({});
   },
 
   users: (parent, args) => {
-    return prisma.users.findMany({});
+    return prisma.user.findMany([]);
   },
   user: (parent, args) => {
     return prisma.user.findFirst({

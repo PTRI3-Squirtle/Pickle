@@ -1,12 +1,16 @@
 /** @format */
 
 import React from 'react';
+import PickleImage from './PickleImage';
+
 import { useHistory } from 'react-router-dom';
 const LeftNavBar = (): JSX.Element => {
   const history = useHistory();
   return (
     <div className='leftNavBar'>
-      <div className='leftNavBar_top'></div>
+      <div className='leftNavBar_top'>
+        <PickleImage />
+      </div>
       <button className='button'>Home</button>
       <button className='button'>Notifications</button>
       <button className='button'>Messages</button>
