@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState, FC } from 'react';
+
+import Modal from './Modal';
 import Post from './Post';
+
 import { mockPostInterface } from '../../types/types';
 
-
-
-
-const Feed = (): JSX.Element => {
+const Feed:FC = () => {
 
   const mockPost: mockPostInterface = {
     id: 1,
@@ -13,6 +13,8 @@ const Feed = (): JSX.Element => {
     username: 'Kevin',
     date: new Date(),
   }
+
+  const [showModal, setShowModal] = useState<boolean>(false);
   
   return (
   <div className='feed'>
@@ -28,9 +30,10 @@ const Feed = (): JSX.Element => {
       <Post {...mockPost} />
     </div>
     <div className='feed_postButton_wrapper'>  
-      <button className='greenButton'>
+      <button className='greenButton' onClick={():void => setShowModal(!showModal)}>
         Post
       </button>
+      {showModal && <Modal />}
     </div>
   </div>
   )
