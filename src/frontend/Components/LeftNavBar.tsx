@@ -1,9 +1,11 @@
 import React from 'react';
+import PickleImage from './PickleImage';
 
 const LeftNavBar = () : JSX.Element => {
   return (
     <div className='leftNavBar'>
       <div className='leftNavBar_top'>
+        <PickleImage />
       </div>
       <button className='button'>Home</button>
       <button className='button'>Notifications</button>  

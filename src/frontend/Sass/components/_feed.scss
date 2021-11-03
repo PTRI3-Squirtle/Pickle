@@ -1,0 +1,29 @@
+// This wraps the feed
+.feed {
+  height: 100vh;
+}
+
+.feed_header_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: .1rem solid $color-grey-light;
+  padding: 0px;
+}
+
+// This wraps the posts in our feed
+.feed_posts_wrapper {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: .1rem solid $color-grey-light;
+  display: flex;
+  flex-direction: column;
+}
+
+.feed_postButton_wrapper {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+}
