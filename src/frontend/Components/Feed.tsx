@@ -13,7 +13,7 @@ const Feed = (): JSX.Element => {
     username: 'Kevin',
     date: new Date(),
   }
-
+  
   return (
   <div className='feed'>
     <div className='feed_header_wrapper'>
