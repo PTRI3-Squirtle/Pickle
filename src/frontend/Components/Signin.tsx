@@ -9,34 +9,37 @@ const Signin = (): JSX.Element => {
 
   return (
     <div className='loginContainer'>
-      <p>Login</p>
-      <form>
-        <label htmlFor='username'>
-          <p>Username</p>
+      <div className='signin_element_wrapper component_title'>Login</div>
+      <div className='signin_element_wrapper'>
+        <form>
+          <label htmlFor='username'>
+            <p>Username</p>
+            <input
+              type='text'
+              id='username'
+              onChange={(e) => setUserName(e.target.value)}
+            ></input>
+          </label>
+          <label htmlFor='password'>
+            <p>Password</p>
+            <input
+              type='text'
+              id='password'
+              name='password'
+              onChange={(e) => setPassword(e.target.value)}
+            ></input>
+          </label>
           <input
-            type='text'
-            id='username'
-            onChange={(e) => setUserName(e.target.value)}
-          ></input>
-        </label>
-        <label htmlFor='password'>
-          <p>Password</p>
-          <input
-            type='text'
-            id='password'
-            name='password'
-            onChange={(e) => setPassword(e.target.value)}
-          ></input>
-        </label>
-        <input
-          type='submit'
-          onClick={(e) => {
-            e.preventDefault();
-            console.log('password: ', password);
-            console.log('userName:', userName);
-          }}
-        />
-      </form>
+            type='submit'
+            id='submit'
+            onClick={(e) => {
+              e.preventDefault();
+              console.log('password: ', password);
+              console.log('userName:', userName);
+            }}
+          />
+        </form>
+      </div>
     </div>
   );
 };

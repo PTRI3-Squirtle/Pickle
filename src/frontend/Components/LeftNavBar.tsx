@@ -11,7 +11,7 @@ const LeftNavBar = (): JSX.Element => {
       <div className='leftNavBar_top'>
         <PickleImage />
       </div>
-      <button className='button'>Home</button>
+      <button className='button' onClick={() => history.push('/feed')}>Home</button>
       <button className='button'>Notifications</button>
       <button className='button'>Messages</button>
       <button className='button'>Bookmarks</button>
@@ -19,6 +19,9 @@ const LeftNavBar = (): JSX.Element => {
       <button className='button'>Profile</button>
       <button className='button' onClick={() => history.push('/post')}>
         Post
+      </button>
+      <button className='button' onClick={() => history.push('/')}>
+        Sign In
       </button>
       <div className='leftNavBar_bottom'></div>
     </div>

@@ -13,8 +13,10 @@ const Post = (props: mockPostInterface): JSX.Element => {
         <p className='post_username'>{props.userName[0]}</p>
       </div>
       <div className='post_description_wrapper'>
+        <p className='post_title'>{props.title}</p>
         <p>{props.description}</p>
         <img
+          className='post_ellipsis_wrapper'
           onClick={() => {
             setExpandComments(!expandComments);
           }}
