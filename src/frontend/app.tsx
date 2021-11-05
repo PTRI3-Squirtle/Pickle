@@ -15,22 +15,24 @@ import './main.scss';
 import { gql, useQuery } from '@apollo/client';
 
 const App = () => {
+  // query definition for graphql
   const GET_USER = gql`
-    query user {
-      user(id: 1) {
+    query Query {
+      users {
         id
         userName
         email
+        password
         zip
       }
     }
   `;
 
+  // this function executes the query
   const postRequest = async () => {
-    console.log('hello');
     const { loading, error, data } = await useQuery(GET_USER);
-    console.log('hello2');
-    if (loading) return null;
+
+    if (loading) return 'loading';
 
     if (error) return `Error! ${error}`;
     else {
@@ -39,7 +41,7 @@ const App = () => {
   };
 
   const getRequest = async () => {};
-  postRequest();
+  // postRequest();
   // getRequest();
 
   return (
