@@ -56,6 +56,13 @@ module.exports = {
         test: /\.(gif|svg|jpg|png)$/,
         loader: 'file-loader',
       },
+      // This loader prevents source-map errors in the console
+      // https://webpack.js.org/loaders/source-map-loader/
+      {
+        test: /.(js|jsx)$/,
+        enforce: 'pre',
+        use: ['source-map-loader'],
+        },
     ],
   },
   plugins: [
