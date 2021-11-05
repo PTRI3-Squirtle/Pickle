@@ -30,6 +30,7 @@ const Signin = (): JSX.Element => {
             ></input>
           </label>
           <input
+          className='greenButton'
             type='submit'
             id='submit'
             onClick={(e) => {

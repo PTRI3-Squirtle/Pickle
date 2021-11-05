@@ -27,10 +27,20 @@ const CreateNewPost = (): JSX.Element => {
   };
 
   return (
-    <label>
-      Post:
-      <input type='text' name='post' />
-    </label>
+     <form>
+      <label className='submit_post_wrapper' >
+        Post:
+        <input id='post' type='text' name='post' />
+      </label>
+      <input
+           className='greenButton'
+            type='submit'
+            onClick={(e) => {
+              e.preventDefault();
+              console.log('e: ', e);
+            }}
+          />
+    </form>
   );
 };
 

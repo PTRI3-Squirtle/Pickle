@@ -1,6 +1,7 @@
 /** @format */
 
 import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router';
 import Post from './Post';
 import { mockPostInterface } from '../../types/types';
 import { gql, useQuery } from '@apollo/client';
@@ -19,7 +20,7 @@ const Feed = (): JSX.Element => {
       }
     }
   `;
-
+  const history = useHistory();
   // Array of post components used to populate feed
   const postsArray: Array<JSX.Element> = [];
   // let variable;
@@ -97,7 +98,7 @@ const Feed = (): JSX.Element => {
       </div> */}
       {postsArray}
       <div className='feed_postButton_wrapper'>
-        <button className='greenButton'>Post</button>
+        <button className='greenButton' onClick={() => history.push('/post')}>Post</button>
       </div>
     </div>
   );
