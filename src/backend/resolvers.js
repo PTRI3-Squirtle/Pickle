@@ -75,6 +75,17 @@ const Mutation = {
       },
     });
   },
+  postMessage: (parent, args) => {
+    return prisma.messages.create({
+      data: {
+         id: args.id,
+         userName: args.userName,
+         message: args.message,
+         messageSender: args.messageSender,
+         timeStamp: args.timeStamp,
+      },
+    });
+  }
   // registerStudent: (parent, args) => {
   //   return prisma.student.create({
   //     data: {
